@@ -16,6 +16,8 @@
 
 Esta é a 3ª e mais recente versão do meu portfólio pessoal. Criado com o objetivo de apresentar um pouco sobre mim e meus conhecimentos. Além de mostrar meus projetos no decorrer de minha evolução.
 
+<h4 align="center"><a href="https://portfolio-pessoal-ariane.vercel.app/">Clique para visitar o projeto</a></h4>
+
 # 📚 Seções <a name="secoes"></a>
 
 - **Intro:** Nele temos uma breve apresentação e o link para o meu currículo;
