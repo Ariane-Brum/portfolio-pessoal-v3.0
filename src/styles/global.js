@@ -68,12 +68,6 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   html {
-    /* scroll-behavior:smooth ; */
-    /* scroll-padding-top: -84px; */
-
-    /* @media (max-width: 31.5rem) {
-    scroll-padding-top: 128px;
-    } */
     @media (max-width: 30rem) {
     scroll-behavior:smooth ;
     scroll-padding-top: 128px;
