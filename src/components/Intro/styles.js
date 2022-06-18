@@ -32,6 +32,7 @@ export const IntroWrapper = styled.div`
   gap: 0 2.5rem;
   padding-top: 10.75rem;
   padding-bottom: 5rem;
+  justify-items: center;
 
   @media (max-width: 50rem) {
     grid-template-columns: 1fr;
