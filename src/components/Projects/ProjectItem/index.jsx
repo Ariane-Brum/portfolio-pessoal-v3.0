@@ -7,7 +7,7 @@ export const ProjectItem = ({ project }) => {
 
   return (
     <S.Card data-aos="zoom-in" data-aos-duration="800">
-      <S.LinkDetails to={`/project/${project.id}`}>
+      <S.LinkDetails to={`project/${project.id}`}>
         <img
           src={project.image}
           alt={`Screenshot do projeto ${project.title}`}
