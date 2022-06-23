@@ -1,5 +1,5 @@
 import * as S from "./styles";
-import { Container } from "../Container";
+import { Container } from "../../components/Container";
 import { Link } from "react-router-dom";
 
 export const NotFound = () => {
