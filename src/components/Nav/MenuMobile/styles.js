@@ -1,3 +1,4 @@
+import { Link } from "react-scroll";
 import styled from "styled-components";
 
 export const Icon = styled.span`
@@ -61,28 +62,6 @@ export const Li = styled.li.attrs((/* props */) => ({ tabIndex: 0 }))`
   height: 70px;
   z-index: 1;
 
-  &.active ${Icon} {
-    transform: translateY(-32px);
-    color: var(--color-p5);
-  }
-
-  &.active ${Text} {
-    opacity: 1;
-    transform: translateY(10px);
-  }
-
-  a {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-    text-align: center;
-    font-weight: 500;
-    -webkit-tap-highlight-color: transparent;
-  }
-
   &:nth-child(1).active ~ ${Indicator} {
     transform: translateX(calc(70px * 0));
   }
@@ -114,5 +93,28 @@ export const Navigation = styled.nav`
 
   ul {
     display: flex;
+  }
+`;
+
+export const Anchor = styled(Link)`
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+  font-weight: 500;
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+
+  &.active ${Icon} {
+    transform: translateY(-32px);
+    color: var(--color-p5);
+  }
+
+  &.active ${Text} {
+    opacity: 1;
+    transform: translateY(10px);
   }
 `;

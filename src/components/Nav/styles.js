@@ -25,12 +25,20 @@ export const Anchor = styled(Link)`
   position: relative;
   cursor: pointer;
 
-  &:hover {
-    color: var(--color-p0);
+  &::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 0%;
+    background: var(--color-0);
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    position: absolute;
   }
 
-  &.active {
-    color: var(--color-p1);
+  &:hover::after,
+  &.active::after {
+    width: 100%;
   }
 
   @media (max-width: 50rem) {
@@ -39,6 +47,16 @@ export const Anchor = styled(Link)`
     border-radius: 4px;
 
     &:hover {
+      background: var(--color-10);
+    }
+
+    &::after {
+      display: none;
+    }
+
+    &:hover,
+    &.active {
+      color: var(--color-p1);
       background: var(--color-10);
     }
   }

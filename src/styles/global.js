@@ -67,15 +67,6 @@ export const GlobalStyle = createGlobalStyle`
     }
   }
 
-  html {
-    @media (max-width: 30rem) {
-    scroll-behavior:smooth ;
-    scroll-padding-top: 128px;
-  }
-  }
-
-  
-
   body {
     font-family: "Roboto", sans-serif;
     -webkit-font-smoothing: antialiased;

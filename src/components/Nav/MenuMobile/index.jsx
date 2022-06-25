@@ -10,14 +10,21 @@ export const MenuMobile = () => {
       <ul>
         {liValues.map((value) => (
           <S.Li
-            onClick={() => setActiveId(value.id)}
             className={activeId === value.id ? "active" : undefined}
             key={value.id}
           >
-            <a href={`#${value.idLink}`}>
+            <S.Anchor
+              activeClass="active"
+              to={value.idLink}
+              onClick={() => setActiveId(value.id)}
+              className={activeId === value.id ? "active" : undefined}
+              smooth={true}
+              offset={-128}
+              duration={500}
+            >
               <S.Icon>{<value.icon />}</S.Icon>
               <S.Text>{value.text}</S.Text>
-            </a>
+            </S.Anchor>
           </S.Li>
         ))}
         <S.Indicator></S.Indicator>

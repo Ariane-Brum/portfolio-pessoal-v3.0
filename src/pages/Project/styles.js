@@ -1,3 +1,4 @@
+import { Link } from "react-scroll";
 import styled from "styled-components";
 import { keyframes } from "styled-components";
 
@@ -84,6 +85,6 @@ export const ProjectWrapper = styled.div`
   }
 `;
 
-export const Up = styled.a`
+export const Up = styled(Link)`
   align-self: flex-end;
 `;

@@ -76,7 +76,11 @@ const Project = () => {
                       <ProjectSlide singleProject={singleProject} />
                       <ProjectInfo singleProject={singleProject} />
                       <OtherProjects links={links} />
-                      <S.Up href="#top" aria-label="Ir para o topo da página">
+                      <S.Up
+                        to="top"
+                        smooth={true}
+                        aria-label="Ir para o topo da página"
+                      >
                         <BsArrowUpSquareFill size={30} color="#ffbb00" />
                       </S.Up>
                     </S.ProjectWrapper>
