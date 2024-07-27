@@ -15,11 +15,11 @@ export const Intro = () => {
               <S.Title>
                 Ariane Brum<span>.</span>
               </S.Title>
-              <Typewriter value="Dev Front-end e Estudante de ADS" />
+              <Typewriter value="Desenvolvedora Front-end." />
             </S.IntroName>
             <S.IntroCv>
               <a
-                href="https://drive.google.com/file/d/1VVE1AxX0Ymb7CM8-j0Ikfm8X5tK5J1lg/view?usp=sharing"
+                href="https://drive.google.com/file/d/1Xn5-P6iestgZUbPrMCcM5lBhISCgquch/view?usp=sharing"
                 target="_blank"
                 rel="noreferrer"
               >

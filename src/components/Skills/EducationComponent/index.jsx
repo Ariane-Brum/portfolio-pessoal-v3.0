@@ -15,7 +15,7 @@ export const EducationComponent = () => {
       <S.Education data-aos="flip-left">
         <EducationItem
           courseType="Tecnólogo"
-          institution="FAQI (Cursando)"
+          institution="FAQI (Concluído)"
           courseName="Análise e desenvolvimento de sistemas"
         />
         <EducationItem

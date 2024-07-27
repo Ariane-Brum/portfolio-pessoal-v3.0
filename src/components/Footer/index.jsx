@@ -15,14 +15,14 @@ export const Footer = () => {
             <h3>Contato</h3>
             <S.ContactList>
               <li>
-                <a href="tel:+5551981265688">+55 51 9812-65688</a>
+                <a href="tel:+5551992142077">+55 51 992142077</a>
               </li>
               <li>
                 <a href="mailto:arianebrum27@gmail.com">
                   arianebrum27@gmail.com
                 </a>
               </li>
-              <li>Porto Alegre - Partenon</li>
+              <li>Porto Alegre</li>
               <li>Rio Grande do Sul - RS</li>
             </S.ContactList>
           </S.FooterContact>

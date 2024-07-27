@@ -3,7 +3,7 @@ import decTopRightSvg from "/dec/top-right.svg";
 
 export const Projects = styled.article`
   background: url(${decTopRightSvg}) no-repeat top 40px right 40px,
-    var(--color-10);
+  var(--color-10);
   padding-top: 5rem;
   padding-bottom: 5rem;
   height: auto;
@@ -30,11 +30,15 @@ export const Projects = styled.article`
 `;
 
 export const Project = styled.ul`
-  display: flex;
+  display: grid;
+	grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
 
-  @media (max-width: 69.438rem) {
-    flex-wrap: wrap;
-    justify-content: center;
+  @media (max-width: 50rem) {
+		grid-template-columns: repeat(2,1fr);
+		justify-content: center;
   }
+  @media (max-width: 30rem) {
+		grid-template-columns: repeat(1,1fr);
+	}
 `;

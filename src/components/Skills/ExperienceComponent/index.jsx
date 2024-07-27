@@ -1,30 +1,30 @@
 import * as S from "./styles";
 import decXP from "/dec/decXp.svg";
+import { ExperienceItem } from "./ExperienceItem";
 import { FaBriefcase } from "react-icons/fa";
 
 export const ExperienceComponent = () => {
   return (
     <>
+			<h3>
+				<FaBriefcase color="#ffbb00" />
+				Experiência
+			</h3>
       <S.Experience data-aos="fade-down">
-        <h3>
-          <FaBriefcase color="#ffbb00" />
-          Experiência
-        </h3>
-        <p>
-          Estou sempre em busca de melhores práticas e também em busca de
-          aprender/experimentar novas tecnologias. Minhas experiências atuais
-          são os projetos pessoais que fiz, e os que ainda estou desenvolvendo.
-          Eles podem ser encontrados no meu{" "}
-          <a
-            href="https://github.com/Ariane-Brum"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Github
-          </a>
-        </p>
+        <S.Experience data-aos="flip-left">
+        	<ExperienceItem
+						experienceCompany="Vinci Shoes"
+						experienceOffice="Estagiária em Desenvolvimento Web"
+						experienceYear="2022 - 2023 · 8 meses"
+        	/>
+        	<ExperienceItem
+						experienceCompany="WebGlobal"
+						experienceOffice="Desenvolvedora Web Júnior"
+						experienceYear="2023 - 2024 - Atual · 1 ano 5 meses"
+        	/>
+      	</S.Experience>
       </S.Experience>
-      <S.DecX src={decXP} width="495" height="10" alt="" />
+      <S.DecX src={decXP} width="586" height="10" alt="" />
     </>
   );
 };

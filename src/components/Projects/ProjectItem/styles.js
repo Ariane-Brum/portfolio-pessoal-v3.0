@@ -90,7 +90,7 @@ export const Tech = styled.li`
 export const CallToAction = styled.span`
   padding: 0.5rem 0;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   gap: 0.5rem;
   font: var(--roboto-16);
