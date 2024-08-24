@@ -11,10 +11,6 @@ export const Projects = styled.article`
   h2 {
     color: var(--color-0);
     margin-bottom: 2rem;
-
-    @media (max-width: 60.938rem) {
-      text-align: center;
-    }
   }
 
   @media (max-width: 61.938rem) {

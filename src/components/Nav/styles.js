@@ -30,7 +30,7 @@ export const Anchor = styled(Link)`
     display: block;
     height: 2px;
     width: 0%;
-    background: var(--color-0);
+    background: var(--color-p1);
     -webkit-transition: 0.3s;
     transition: 0.3s;
     position: absolute;

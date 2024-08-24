@@ -44,7 +44,7 @@ export const ProjectTitle = styled.h3`
 `;
 export const ProjectDescription = styled.p`
   color: var(--color-5);
-  font: var(--roboto-16);
+  font: var(--roboto-14);
   margin-bottom: 1.25rem;
 `;
 

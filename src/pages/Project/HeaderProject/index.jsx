@@ -1,5 +1,5 @@
 import * as S from "./styles";
-import logo from "/logo.svg";
+import { FaHome } from "react-icons/fa";
 import { Container } from "../../../components/Container";
 
 export const HeaderProject = () => {
@@ -8,7 +8,8 @@ export const HeaderProject = () => {
       <Container>
         <S.HeaderWrapper>
           <S.HeaderLogo to="/">
-            <img src={logo} alt="Logo do meu site" width={157} height={33} />
+						<FaHome />
+						Home
           </S.HeaderLogo>
         </S.HeaderWrapper>
       </Container>

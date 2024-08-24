@@ -9,7 +9,7 @@ export const GlobalStyle = createGlobalStyle`
 
   *::after,
   *::before {
-    box-sizing:border-box ;
+    box-sizing:border-box;
   }
 
   :root {
@@ -52,8 +52,6 @@ export const GlobalStyle = createGlobalStyle`
   --roboto-24: 400 1.5rem/1.5 "Roboto", sans-serif;
   --roboto-32: 500 2rem/1.25 "Roboto", sans-serif;
   }
-
-
 
   @media (max-width: 1080px) {
     html {

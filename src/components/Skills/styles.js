@@ -13,7 +13,6 @@ export const Skills = styled.section`
 
     @media (max-width: 50rem) {
       margin-bottom: 2rem;
-      text-align: center;
     }
   }
 

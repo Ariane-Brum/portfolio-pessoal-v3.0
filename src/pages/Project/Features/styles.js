@@ -1,9 +1,8 @@
 import styled from "styled-components";
 
 export const Features = styled.ul`
-  background: var(--color-11);
+  background: var(--color-12);
   color: var(--color-0);
-  box-shadow: 0 4px 16px 4px rgb(0 0 0 / 30%);
   border-radius: 4px;
   padding: 1rem;
 
@@ -15,7 +14,7 @@ export const Features = styled.ul`
     padding: 0.625rem 1rem;
     border-radius: 4px;
     box-shadow: 0 2px 3px 0px rgb(0 0 0 / 50%);
-    background: var(--color-12);
+    background: var(--color-11);
     border: 2px solid var(--color-12);
     font: var(--roboto-16);
     font-size: 0.875rem;

@@ -4,7 +4,7 @@ import decBottompRightSvg from "/dec/bottom-right.svg";
 
 export const About = styled.article`
   background: url(${decTopRightSvg}) no-repeat top 40px right 40px,
-    url(${decBottompRightSvg}) no-repeat bottom 40px right 40px, var(--color-11);
+  url(${decBottompRightSvg}) no-repeat bottom 40px right 40px, var(--color-11);
   padding-top: 5rem;
   padding-bottom: 5rem;
 
@@ -89,7 +89,7 @@ export const AboutContent = styled.div`
   }
 
   p {
-    font: var(--roboto-18);
+    font: var(--roboto-16);
     color: var(--color-5);
     max-width: 60ch;
     margin-bottom: 1rem;

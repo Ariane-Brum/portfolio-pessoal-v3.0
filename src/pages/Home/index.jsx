@@ -4,19 +4,29 @@ import { About } from "../../components/About";
 import { Projects } from "../../components/Projects";
 import { Header } from "../../components/Header";
 import { Skills } from "../../components/Skills";
+import { Github } from "../../components/Github";
+import Project from "../Project";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { Footer } from "../../components/Footer";
 import Head from "../../components/helpers/Head/Head";
+import { useState } from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
+import { useProject } from '../../hooks/useProject';
 
 const Home = () => {
-  useEffect(() => {
-    AOS.init({
-      duration: 1500,
-      once: true,
-    });
-  }, []);
+	const [selectedProject, setSelectedProject] = useState(null);
+	const { id } = useParams();
+	const { projectList } = useProject();
+	const navigate = useNavigate();
+
+	useEffect(() => {
+		AOS.init({
+			duration: 1500,
+			once: true,
+		});
+	}, []);
 
   return (
     <>
@@ -28,8 +38,9 @@ const Home = () => {
         />
         <Intro />
         <About />
-        <Projects />
+				<Projects />
         <Skills />
+				<Github />
       </main>
       <Footer />
     </>

@@ -1,5 +1,5 @@
 import * as S from "./styles";
-import decXP from "/dec/decXp.svg";
+import decXP from "/dec/decXm.svg";
 import { ExperienceItem } from "./ExperienceItem";
 import { FaBriefcase } from "react-icons/fa";
 
@@ -24,7 +24,7 @@ export const ExperienceComponent = () => {
         	/>
       	</S.Experience>
       </S.Experience>
-      <S.DecX src={decXP} width="586" height="10" alt="" />
+      <S.DecX src={decXP} width="586" height="8" alt="" />
     </>
   );
 };

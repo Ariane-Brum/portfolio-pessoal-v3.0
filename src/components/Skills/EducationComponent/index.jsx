@@ -1,6 +1,6 @@
 import * as S from "./styles";
 import decY from "/dec/decYm.svg";
-import decXM from "/dec/decXm.svg";
+import decXP from "/dec/decXp.svg";
 import { EducationItem } from "./EducationItem";
 import { FaUserGraduate } from "react-icons/fa";
 
@@ -24,7 +24,7 @@ export const EducationComponent = () => {
           courseName="Curso técnico informática para internet"
         />
       </S.Education>
-      <S.DecX src={decXM} width="586" height="10" alt="" />
+      <S.DecX src={decXP} width="586" height="10" alt="" />
     </>
   );
 };

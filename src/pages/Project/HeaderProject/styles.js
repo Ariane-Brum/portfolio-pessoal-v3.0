@@ -18,8 +18,8 @@ export const HeaderWrapper = styled.div`
   gap: 1.25rem;
   justify-content: center;
   align-items: center;
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 
   @media (max-width: 31.5rem) {
     gap: 0.625rem;
@@ -27,5 +27,13 @@ export const HeaderWrapper = styled.div`
 `;
 
 export const HeaderLogo = styled(Link)`
-  text-align: center;
+  display:flex;
+	flex-direction: column;
+	align-items: center;
+  padding: 0.5rem 0;
+	color: var(--color-5);
+  svg {
+    color: var(--color-p2);
+		font-size: 2rem;
+  }
 `;

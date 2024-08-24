@@ -4,6 +4,7 @@ import {
   FaFolderOpen,
   FaGraduationCap,
   FaHome,
+	FaGithub
 } from "react-icons/fa";
 
 import {
@@ -35,6 +36,7 @@ export const liValues = [
   },
   { id: 2, text: "Projetos", icon: FaFolderOpen, idLink: "projetos" },
   { id: 3, text: "Formação", icon: FaGraduationCap, idLink: "formacao" },
+  { id: 4, text: "Github", icon: FaGithub, idLink: "github" },
 ];
 
 export const dataCourses = [
@@ -59,3 +61,12 @@ export const dataTechs = [
   { id: 9, icon: SiBootstrap, techName: "Bootstrap" },
   { id: 10, icon: SiTailwindcss, techName: "Tailwind" },
 ];
+
+export const arrayLanguage = [
+	{ id: 0, lang: 'JavaScript', bg: "#f1e05a" },
+	{ id: 1, lang: 'PHP', bg: "#4F5D95" },
+	{ id: 2, lang: 'TypeScript', bg: "#3178c6" },
+	{ id: 3, lang: 'CSS', bg: "#563d7c" },
+	{ id: 4, lang: 'HTML', bg: "#e34c26" },
+	{ id: 5, lang: 'SCSS', bg: "#c6538c" },
+]

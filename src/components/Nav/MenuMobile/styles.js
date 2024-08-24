@@ -77,6 +77,9 @@ export const Li = styled.li.attrs((/* props */) => ({ tabIndex: 0 }))`
   &:nth-child(4).active ~ ${Indicator} {
     transform: translateX(calc(70px * 3));
   }
+	&:nth-child(5).active ~ ${Indicator} {
+    transform: translateX(calc(70px * 4));
+  }
 `;
 
 export const Navigation = styled.nav`
