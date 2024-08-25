@@ -1,14 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 
-const Head = (props) => {
-  React.useEffect(() => {
-    document.title = props.title + " | Portfólio";
-    document
-      .querySelector("meta[name='description']")
-      .setAttribute("content", props.description || "");
-  }, [props]);
+const Head = ({ title, description }) => {
+	useEffect(() => {
+		document.title = `${title} | Portfólio`;
+		document
+			.querySelector("meta[name='description']")
+			.setAttribute("content", description || "");
+	}, [title, description]);
 
-  return <></>;
+	return null;
 };
 
 export default Head;

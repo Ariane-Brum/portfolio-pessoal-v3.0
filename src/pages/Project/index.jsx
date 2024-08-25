@@ -1,106 +1,91 @@
 import * as S from "./styles";
-import { useEffect, lazy, Suspense } from "react";
 import { Container } from "../../components/Container";
-import { useParams } from "react-router-dom";
+import { Loading } from "../../components/helpers/Loading";
 import { HeaderProject } from "./HeaderProject";
 import { ProjectInfo } from "./ProjectInfo";
 import { OtherProjects } from "./OtherProjects";
 import { Subtitle } from "../../components/Subtitle";
-import { Loading } from "../../components/helpers/Loading";
-import { BsArrowUpSquareFill } from "react-icons/bs";
-import { useProject } from "../../hooks/useProject";
+import { BsFillArrowUpSquareFill } from "react-icons/bs";
 import useMedia from "../../hooks/useMedia";
-import { useState } from "react";
-import firebase from "../../services/firebase";
+import { useProject } from "../../hooks/useProject";
+import { Suspense, useEffect, lazy } from "react";
+import { useParams, Link } from "react-router-dom";
 import Head from "../../components/helpers/Head/Head";
 
 const ProjectSlide = lazy(() => import("./ProjectSlide"));
 
 const Project = () => {
-  const { projectList } = useProject();
-  const [singleProject, setSingleProject] = useState([]);
-  const [loading, setLoading] = useState(false);
-  const { id } = useParams();
-  const tablet = useMedia("(max-width: 61.938rem)");
+	const { projectList, getSingleProject, singleProject, loading } = useProject();
+	const tablet = useMedia("(max-width:61.938rem)");
+	const { id } = useParams();
 
-  const getSingleProject = async (id) => {
-    setLoading(true);
-    try {
-      const docRef = await firebase
-        .firestore()
-        .collection("projetos")
-        .doc(id)
-        .get();
+	useEffect(() => {
+		if (id) {
+			getSingleProject(id);
+			window.scrollTo(0, 0);
+		}
+	}, [id]);
 
-      if (docRef.exists) {
-        const data = docRef.data();
-        setSingleProject(data);
-      } else {
-        console.log("No such document!");
-      }
-    } catch (error) {
-      console.log(error);
-    } finally {
-      setLoading(false);
-    }
-  };
+	const links = projectList.filter((link) => link.id !== id);
 
-  useEffect(() => {
-    getSingleProject(id);
-  }, [id]);
-
-  const links = projectList.filter((link) => {
-    return link.id !== id;
-  });
-
-  return (
-    <S.ProjectContainer id="top">
-      <HeaderProject />
-
-      <Container>
-        {loading ? (
-          <Loading />
-        ) : (
-          <S.Project>
-            {singleProject.length !== 0 && (
-              <Suspense fallback={<div></div>}>
-                <Head
-                  title={singleProject.title}
-                  description={singleProject.description}
-                />
-                <S.ProjectSpan>Projeto</S.ProjectSpan>
-                <Subtitle>{singleProject.title}</Subtitle>
-                <S.GridContainer>
-                  {tablet ? (
-                    <S.ProjectWrapper>
-                      <ProjectSlide singleProject={singleProject} />
-                      <ProjectInfo singleProject={singleProject} />
-                      <OtherProjects links={links} />
-                      <S.Up
-                        to="top"
-                        smooth={true}
-                        aria-label="Ir para o topo da página"
-                      >
-                        <BsArrowUpSquareFill size={30} color="#ffbb00" />
-                      </S.Up>
-                    </S.ProjectWrapper>
-                  ) : (
-                    <>
-                      <S.ProjectWrapper>
-                        <ProjectSlide singleProject={singleProject} />
-                        <OtherProjects links={links} />
-                      </S.ProjectWrapper>
-                      <ProjectInfo singleProject={singleProject} />
-                    </>
-                  )}
-                </S.GridContainer>
-              </Suspense>
-            )}
-          </S.Project>
-        )}
-      </Container>
-    </S.ProjectContainer>
-  );
+	return (
+		<S.ProjectContainer id="top">
+			<HeaderProject />
+			<Container>
+				{loading ? (
+					<Loading />
+				) : (
+					<S.Project>
+						{singleProject ? (
+							<Suspense fallback={<div></div>}>
+								<Head
+									title={singleProject.title}
+									description={singleProject.description}
+								/>
+								<S.ProjectSpan>Projeto</S.ProjectSpan>
+								<Subtitle>{singleProject.title}</Subtitle>
+								<S.GridContainer>
+									{tablet ? (
+										<S.ProjectWrapper>
+											<ProjectSlide singleProject={singleProject} />
+											<ProjectInfo singleProject={singleProject} />
+											<OtherProjects links={links} />
+											<S.Up
+												to="top"
+												smooth={true}
+												aria-label="Ir para o topo da página"
+											>
+												<BsFillArrowUpSquareFill
+													color="#ffbb00"
+													size={30}
+												/>
+											</S.Up>
+										</S.ProjectWrapper>
+									) : (
+										<>
+											<S.ProjectWrapper>
+												<ProjectSlide singleProject={singleProject} />
+												<OtherProjects links={links} />
+											</S.ProjectWrapper>
+											<ProjectInfo singleProject={singleProject} />
+										</>
+									)}
+								</S.GridContainer>
+							</Suspense>
+						) : (
+							<S.ProjectNotFound>
+								<S.Title>
+									Error: 404<span>.</span>
+								</S.Title>
+								<p>Projeto não encontrado!</p>
+								<Link to="/">Voltar para Home</Link>
+							</S.ProjectNotFound>
+						)}
+					</S.Project>
+				)}
+			</Container>
+		</S.ProjectContainer>
+	);
 };
 
 export default Project;
